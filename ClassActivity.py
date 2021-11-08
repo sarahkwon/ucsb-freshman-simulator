@@ -13,7 +13,7 @@ class ClassActivity:
     def __repr__(self):
         return "Name: " + self.name + ": \n" + "Description: " + self.desc + "\n" + "Time Cost: " + str(self.timeCost) + "\n" + "Stat Modifiers: " + self.statModifiers + "\n" +"Resource Modifiers: " + self.resourceModifiers + "\n" +"Flavor Text: " + self.flavorText + "\n"
 
-def addActivities(fileName, activities):
+def addActivities(fileName):
         activities = {}
         # open the csv file fileName and read from it
         with open(fileName, newline = '') as csvfile:
@@ -30,3 +30,4 @@ def addActivities(fileName, activities):
                     str(row["flavor"])
                 )
                 i += 1
+        return activities
