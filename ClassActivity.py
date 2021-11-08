@@ -16,7 +16,7 @@ class ClassActivity:
 def addActivities(fileName, activities):
         activities = {}
         # open the csv file fileName and read from it
-        with open(self.fileName, newline = '') as csvfile:
+        with open(fileName, newline = '') as csvfile:
             r = csv.DictReader(csvfile, delimiter=',')
             i = 0
             for row in r:
