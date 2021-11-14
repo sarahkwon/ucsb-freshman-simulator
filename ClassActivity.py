@@ -38,5 +38,5 @@ def addActivities(fileName):
                 i += 1
         return activities
 
-a = addActivities("test.csv")
-print(a[1].name)
+if __name__ == "__main__":
+    
