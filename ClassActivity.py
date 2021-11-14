@@ -34,9 +34,9 @@ def addActivities(fileName):
                     str(row["Name"]), 
                     str(row["Description"]), 
                     int(row["Time Cost"]), 
-                    str(row["Intelligence"]),
-                    str(row["Charisma"]),
-                    str(row["Fitness"]), 
+                    int(row["Intelligence"]),
+                    int(row["Charisma"]),
+                    int(row["Fitness"]), 
                     str(row["Resource Modifiers"]),
                     str(row["Flavor Text"])
                 )
