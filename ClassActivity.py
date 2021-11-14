@@ -2,7 +2,8 @@ import csv
 
 class ClassActivity:
 
-    def __init__(self, name, desc, timeCost, intelligence, charisma, fitness, resourceModifiers, flavorText):
+    def __init__(self, code, name, desc, timeCost, intelligence, charisma, fitness, resourceModifiers, flavorText):
+        self.code = code
         self.name = name
         self.desc = desc
         self.timeCost = timeCost
@@ -23,7 +24,8 @@ def addActivities(fileName):
             i = 0
             for row in r:
                 # for each row in csvFile, append the class activity to the array activities
-                activities[row["Name"]] = ClassActivity(
+                activities[i] = ClassActivity( 
+                    str(row["Code"]),
                     str(row["Name"]), 
                     str(row["Description"]), 
                     int(row["Time Cost"]), 
@@ -35,3 +37,5 @@ def addActivities(fileName):
                 )
                 i += 1
         return activities
+
+
