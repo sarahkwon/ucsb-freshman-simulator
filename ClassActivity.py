@@ -2,7 +2,7 @@ import csv
 
 class ClassActivity:
 
-    def __init__(self, code, name, desc, timeCost, intelligence, charisma, fitness, resourceModifiers, flavorText):
+    def __init__(self, code, name, desc, timeCost, intelligence, charisma, fitness, energy, stress, money, flavorText):
         self.code = code
         self.name = name
         self.desc = desc
@@ -10,7 +10,9 @@ class ClassActivity:
         self.intelligence = intelligence
         self.charisma = charisma
         self.fitness = fitness
-        self.resourceModifiers = resourceModifiers
+        self.energy = energy
+        self.stress = stress
+        self.money = money
         self.flavorText = flavorText
     
     def __repr__(self):
@@ -32,7 +34,9 @@ def addActivities(fileName):
                     int(row["Intelegence"]),
                     int(row["Charisma"]),
                     int(row["Fitness"]), 
-                    str(row["Resource Modifiers"]),
+                    int(row["Energy"]),
+                    int(row["Stress"]),
+                    int(row["Money"]),
                     str(row["Flavor Text"])
                 )
                 i += 1
