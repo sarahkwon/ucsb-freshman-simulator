@@ -13,14 +13,7 @@ class ClassActivity:
         self.flavorText = flavorText
     
     def __repr__(self):
-        return "Name: " + self.name + ": \n" + 
-        "Description: " + self.desc + "\n" + 
-        "Time Cost: " + str(self.timeCost) + "\n" + 
-        "Intelligence: " + str(self.intelligence) + "\n" + 
-        "Charisma: "+ str(self.charisma) + "\n" + 
-        "Fitness: " + str(self.fitness) + "\n" +
-        "Resource Modifiers: " + self.resourceModifiers + "\n" +
-        "Flavor Text: " + self.flavorText + "\n"
+        return "Name: " + self.name + ": \n" + "Description: " + self.desc + "\n" + "Time Cost: " + str(self.timeCost) + "\n" + "Intelligence: " + str(self.intelligence) + "\n" + "Charisma: "+ str(self.charisma) + "\n" + "Fitness: " + str(self.fitness) + "\n" +"Resource Modifiers: " + self.resourceModifiers + "\n" +"Flavor Text: " + self.flavorText + "\n"
 
 def addActivities(fileName):
         activities = {}
