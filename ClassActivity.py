@@ -29,7 +29,7 @@ def addActivities(fileName):
                     str(row["Name"]), 
                     str(row["Description"]), 
                     int(row["Time Cost"]), 
-                    int(row["Intelligence"]),
+                    int(row["Intelegence"]),
                     int(row["Charisma"]),
                     int(row["Fitness"]), 
                     str(row["Resource Modifiers"]),
@@ -38,4 +38,5 @@ def addActivities(fileName):
                 i += 1
         return activities
 
-
+a = addActivities("test.csv")
+print(a[1].name)
