@@ -1,4 +1,7 @@
-import Protagonist_class as protag
+import Protagonist_class as prot
+import UI as ui
+import ClassActivity as activity
+import ClassEvent as event
 
 #game starts with menu - menu loop
 #mainloop - time system; player choices - , protag stats and resource changes
