@@ -16,7 +16,7 @@ class ClassActivity:
         self.flavorText = flavorText
     
     def __repr__(self):
-        return "Name: " + self.name + ": \n" + "Description: " + self.desc + "\n" + "Time Cost: " + str(self.timeCost) + "\n" + "Intelligence: " + str(self.intelligence) + "\n" + "Charisma: "+ str(self.charisma) + "\n" + "Fitness: " + str(self.fitness) + "Stress: " + self.stress + "\n" + "Energy: " + self.energy + "\n" + "Money: " + self.money + "\n" +"Flavor Text: " + self.flavorText + "\n"
+        return "Name: " + self.name + ": \n" + "Description: " + self.desc + "\n" + "Time Cost: " + str(self.timeCost) + "\n" + "Intelligence: " + str(self.intelligence) + "\n" + "Charisma: "+ str(self.charisma) + "\n" + "Fitness: " + str(self.fitness) + "\n" + "Stress: " + self.stress + "\n" + "Energy: " + self.energy + "\n" + "Money: " + self.money + "\n" +"Flavor Text: " + self.flavorText + "\n"
 
 def addActivities(fileName):
         activities = {}
@@ -31,7 +31,7 @@ def addActivities(fileName):
                     str(row["Name"]), 
                     str(row["Description"]), 
                     str(row["Time Cost"]), 
-                    str(row["Intelegence"]),
+                    str(row["Intelligence"]),
                     str(row["Charisma"]),
                     str(row["Fitness"]), 
                     str(row["Energy"]),
@@ -43,5 +43,5 @@ def addActivities(fileName):
         return activities
 
 if __name__ == "__main__":
-    a = addActivities('test.csv')
+    a = addActivities('Activities.csv')
     print(a)
