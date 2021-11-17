@@ -18,7 +18,7 @@ activities = activity.addActivities("activities.csv")
 #    event.addEvents()
 name = input('Please input your name: ')
 major = input('Please input your major: ')
-protagonist = prot(name, major)
+protagonist = prot.Protagonist(name, major)
 
 
 def main_loop():
@@ -29,7 +29,7 @@ def main_loop():
             break
 
         activities_list = []
-        for i in activites:
+        for i in activities:
             activities_list.append(activities[i].name)
 
         print(activities_list)

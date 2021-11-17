@@ -1,7 +1,5 @@
-class ui():
-    def __init__(self):
-        pass
-       
+class ui:
+    
     def option_selection(self, *args):
         if len(args) == 0:
             print('')
