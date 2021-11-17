@@ -1,0 +1,77 @@
+#This is a vision for the architecture of the first, most barebones version of the game. It will be uptaded as we add more and more features.
+
+#Overview:
+
+-Features we're implementing this week:
+1. Choosing of activities and events
+2. Player's stats and resources changing
+3. Time skipping as the activities and events get executed
+4. 
+
+-At the moment, let’s just have a new game start every time you startup the game; 
+
+#Future features (features we're definitely not doing now):
+1. Menu
+2. Saving
+3. Multiple game profiles
+4. Going to cafeteria is a repeating event
+5. Events' outcome depending on the time of arrival (if you go to a lecture at the end, it will not increase intelligence
+6. Multiple stats (separate subject knowledge stats)
+7. Random events
+8. Random events' probability being dependant on certain conditions
+9. Time skipping unreliably (activities such as homework and walking to classes takes a random amount more than in their description; depends on player's XP)
+10.
+
+###			    ###
+## Game algorithm pseudocode ##
+###			    ###
+-------------------------------
+----Overview:
+The game can be split into cycles that repeat indefinitely, while each cycle consists of steps. Between every step a random event has a chance to happen. 
+First, the player is presented with a choice of activities and events they can do at the moment. Once the activity or event is chosen, the time skips forward, the stats and resources change - this is the events'/activity's execution. 
+
+	Schematic:
+STEP 1->player choice -> 
+->[random event roll]
+	-random event executes (or not)
+	-random event flavor text is shown
+	-random event stat and resource change is done
+STEP 2 ->activity executes(time skip, stat and resource change) -> 
+->[random event roll]
+STEP 3->flavor text is shown; stat, resource and time change is displayed; current time is displayed-> 
+[[[REPEAT]]]
+STEP 1->new player choice is presented ->
+etc....
+
+Some choices can lead to multiple events happening:
+(For example, choosing "go to class" first executes "walk to class", and then automatically executes "Listen to the lecture")
+
+**Pseudocode ( with elements of real code ):
+#
+
+Main loop starts
+
+>Beginning parameters are set (values of all variables)
+>Activities are set up	
+	activities.csv ---[read by]-> Activities
+	activities.csv ---[read by]-> Events
+	for every activity an object is created
+
+
+
+>Check which activities and events are available at this time
+	available_activities = []
+	available_activities = activity_checker(time, place, etc..)
+>Present the player with a choice of all available activities and events:
+	execute_activity(UI(available activities))
+		(execute_activity executes the activity code; UI takes in choices, displays them, takes player input, returns the selected option (returns activity code))
+
+>(IN FUTURE VERSIONS) A random event is rolled (rolled is like a dice rolled; a random event gets selected or not)
+>Player chooses activity they are going to be doing; it gets executed
+>
+>(IN FUTURE VERSIONS) A random eveent is rolled
+
+
+Every time a new day starts - date, day of the week are displayed together with current time; 
+Every time a new week starts - month is presented together with current time and the rest
+	
