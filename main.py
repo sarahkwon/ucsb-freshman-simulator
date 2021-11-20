@@ -1,6 +1,5 @@
 import Protagonist_class as prot
 from UI import ui
-from ClassActivity import *
 import ClassActivity as activity
 import ClassEvent as event
 
@@ -9,6 +8,7 @@ import ClassEvent as event
 #exit - starts saving: record attributes of properties of all objects [save(<object.attribute>)]; break mainloop; exit application
 
 ui = ui()
+activities = activity.addActivities("Activities.csv")
 
 def menu():
 
