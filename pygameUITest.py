@@ -12,14 +12,6 @@ background.fill(pygame.Color('#000000'))
 
 manager = pygame_gui.UIManager((800, 600))
 
-activities_list = []
-for i in activities:
-    activities_list.append(activities[i].name)
-
-for index, value in enumerate(activities_list):
-    pygame_gui.elements.UIButton(relative_rect=pygame.Rect((350, 275), (100, 50)),
-                                             text='Say Hello',
-                                             manager=manager)
 
 button_1 = pygame_gui.elements.UIButton(relative_rect=pygame.Rect((350, 275), (100, 50)),
                                              text='Say Hello',
