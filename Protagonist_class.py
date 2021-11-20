@@ -14,6 +14,7 @@ class Protagonist():
         self.energy = 100 #0 - 100%
         self.money = 50 
 
+
     # update player class given a class activity
     def updateStats(self, activity):
         self.updateIntelligence(activity.intelligence)
@@ -66,6 +67,25 @@ class Protagonist():
 
     def updateMoney(self, amt):
         self.money += amt
+        
+    def printStats(self):
+        print(
+            """
+    {}
+    Major: {}
+|----RESOURCES----<>
+| Stress   | {}   
+| Energy   | {}   
+| Money    | ${}
+|------STATS------<>
+| XP       | {} 
+| Intel    | {}   
+| Fitness  | {}   
+| Charisma | {}   
+|------------------<>
+            """.format(self.name, self.major, self.stress, self.energy, self.money, self.xp, self.intelligence, self.fitness, self.charisma)
+        )
+=======
 
 if __name__ == "__main__":
     test = Protagonist("John", "cs")
