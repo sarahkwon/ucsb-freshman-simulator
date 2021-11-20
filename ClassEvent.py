@@ -3,7 +3,7 @@ from ClassActivity import ClassActivity
 
 class ClassEvent(ClassActivity):
     def __init__(self, code, name, desc, mon, tues, wed, thurs, fri, sat, sun, knowledge, charisma, fitness, stress, money, flavorText):
-        super().__init__(code, name, desc, knowledge, charisma, fitness, stress, money, flavorText)
+        super().__init__(code, name, desc, knowledge, charisma, fitness, 0, stress, money, flavorText)
         self.schedDays = [mon, tues, wed, thurs, fri, sat, sun]
 
     def missedEvent(self):
