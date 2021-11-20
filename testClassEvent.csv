@@ -1,0 +1,3 @@
+Code,Name,Description,Scheduled Time,Scheduled Day,Time Cost,Knowledge,Charisma,Fitness,Stress,Energy,Money,Flavor Text
+test_code,Name of event,test description of event,2:00 PM,"Mon Wed Fri",90,1,2,3,4,5,6,"This is flavor text"
+test_code2,Name of event2,test description of event2,3:00 PM,"Mon Wed Fri",90,1,2,3,4,5,6,"This is flavor text2"
