@@ -2,12 +2,12 @@ import csv
 
 class ClassActivity:
 
-    def __init__(self, code, name, desc, timeCost, intelligence, charisma, fitness, energy, stress, money, flavorText):
+    def __init__(self, code, name, desc, timeCost, knowledge, charisma, fitness, energy, stress, money, flavorText):
         self.code = code
         self.name = name
         self.desc = desc
         self.timeCost = timeCost
-        self.intelligence = intelligence
+        self.knowledge = knowledge
         self.charisma = charisma
         self.fitness = fitness
         self.energy = energy
@@ -16,7 +16,7 @@ class ClassActivity:
         self.flavorText = flavorText
     
     def __repr__(self):
-        return "Name: " + self.name + ": \n" + "Description: " + self.desc + "\n" + "Time Cost: " + str(self.timeCost) + "\n" + "Intelligence: " + str(self.intelligence) + "\n" + "Charisma: "+ str(self.charisma) + "\n" + "Fitness: " + str(self.fitness) + "\n" + "Energy: " + str(self.energy) + "\n" + "Stress: " + str(self.stress) + "\n" + "Money: " + str(self.money) + "\n" +"Flavor Text: " + self.flavorText + "\n\n"
+        return "Name: " + self.name + ": \n" + "Description: " + self.desc + "\n" + "Time Cost: " + str(self.timeCost) + "\n" + "Knowledge: " + str(self.knowledge) + "\n" + "Charisma: "+ str(self.charisma) + "\n" + "Fitness: " + str(self.fitness) + "\n" + "Energy: " + str(self.energy) + "\n" + "Stress: " + str(self.stress) + "\n" + "Money: " + str(self.money) + "\n" +"Flavor Text: " + self.flavorText + "\n\n"
 
 def addActivities(fileName):
         activities = {}
@@ -31,7 +31,7 @@ def addActivities(fileName):
                     str(row["Name"]), 
                     str(row["Description"]), 
                     int(row["Time Cost"]), 
-                    int(row["Intelligence"]),
+                    int(row["Knowledge"]),
                     int(row["Charisma"]),
                     int(row["Fitness"]), 
                     int(row["Energy"]),
