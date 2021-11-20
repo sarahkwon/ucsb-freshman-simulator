@@ -1,3 +1,6 @@
+from ClassActivity import activities
+from Protagonist_class import Protagonist
+
 class ui:
     
     def option_selection(self, args):
@@ -24,3 +27,13 @@ class ui:
         else:
             return user_choice
 
+    def outcome_text(self, arg):
+        prot = Protagonist()
+        print('|------------------------|')
+        print('| Stress   |')
+        print('| Stress   |')
+        print('| Stress   |')
+        print('| Stress   |')
+        print('| Stress   |')
+if __name__ == "__main__":
+    print()

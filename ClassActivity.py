@@ -40,6 +40,8 @@ def addActivities(fileName):
                 i += 1
         return activities
 
+activities = addActivities("Activities.csv")
+
 if __name__ == "__main__":
     a = addActivities('Activities.csv')
     print(a)
