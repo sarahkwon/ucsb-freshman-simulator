@@ -2,15 +2,15 @@ import csv
 from ClassActivity import ClassActivity
 
 class ClassEvent(ClassActivity):
-    def __init__(self, code, name, desc, mon, tues, wed, thurs, fri, sat, sun, knowledge, charisma, fitness, stress, money, flavorText):
-        super().__init__(code, name, desc, knowledge, charisma, fitness, 0, stress, money, flavorText)
+    def __init__(self, code, name, desc, mon, tues, wed, thurs, fri, sat, sun, intelligence, charisma, fitness, stress, money, flavorText):
+        super().__init__(code, name, desc, intelligence, charisma, fitness, 0, stress, money, flavorText)
         self.schedDays = [mon, tues, wed, thurs, fri, sat, sun]
 
     def missedEvent(self):
         return self
 
     def __repr__(self):
-        return "Name: " + self.name + " \n" + "Description: " + self.desc + "\n" + "Scheduled Days: " + "Filler text \n" + "Knowledge: " + str(self.knowledge) + "\n" + "Charisma: "+ str(self.charisma) + "\n" + "Fitness: " + str(self.fitness) + "\n" + "Stress: " + str(self.stress) + "\n" + "Money: " + str(self.money) + "\n" + "Flavor Text: " + str(self.flavorText) + "\n\n"
+        return "Name: " + self.name + " \n" + "Description: " + self.desc + "\n" + "Scheduled Days: " + "Filler text \n" + "Intelligence: " + str(self.intelligence) + "\n" + "Charisma: "+ str(self.charisma) + "\n" + "Fitness: " + str(self.fitness) + "\n" + "Stress: " + str(self.stress) + "\n" + "Money: " + str(self.money) + "\n" + "Flavor Text: " + str(self.flavorText) + "\n\n"
 
 
 
@@ -33,7 +33,7 @@ def addEvents(fileName):
                     int(row["Friday"]),
                     int(row["Saturday"]),
                     int(row["Sunday"]),
-                    int(row["Knowledge"]),
+                    int(row["Intelligence"]),
                     int(row["Charisma"]),
                     int(row["Fitness"]), 
                     int(row["Stress"]),

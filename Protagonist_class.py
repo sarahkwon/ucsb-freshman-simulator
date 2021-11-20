@@ -6,7 +6,7 @@ class Protagonist():
     def __init__(self, your_name, your_major):
         self.name = your_name
         self.major = your_major
-        self.s_Knowledge = 0
+        self.s_Intelligence = 0
         self.s_Charisma = 5
         self.s_Fitness = 1
         self.s_XP = 1 
@@ -16,15 +16,14 @@ class Protagonist():
 
     # update player class given a class activity
     def updateStats(self, activity):
-        self.updateKnowledge(activity.knowledge)
+        self.updateIntelligence(activity.intelligence)
         self.updateCharisma(activity.charisma)
         self.updateFitness(activity.fitness)
-        self.updateEnergy(activity.energy)
         self.updateStress(activity.stress)
         self.updateMoney(activity.money)
 
     def updateStats(self, event):
-        self.updateKnowledge(event.knowledge)
+        self.updateIntelligence(event.intelligence)
         self.updateCharisma(event.charisma)
         self.updateFitness(event.fitness)
         self.updateEnergy(event.energy)
@@ -33,10 +32,10 @@ class Protagonist():
 
 
     # basic set functions for class    
-    def updateKnowledge(self, amt):
-        self.s_Knowledge += amt
-        if (self.s_Knowledge < 0):
-            self.s_Knowledge = 0
+    def updateIntelligence(self, amt):
+        self.s_Intelligence += amt
+        if (self.s_Intelligence < 0):
+            self.s_Intelligence = 0
 
     def updateCharisma(self, amt):
         self.s_Charisma += amt
@@ -76,4 +75,4 @@ if __name__ == "__main__":
 
     testEvent = Event.ClassEvent("test_event", "test event name", "this is a test event", 1, 1, 1, 1, 1, 1, 1, 4, -1, -1, -1, -1, "flavor text")
     test.updateStats(testEvent)
-    print(test.s_Knowledge)
+    print(test.s_Intelligence)
