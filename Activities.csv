@@ -1,4 +1,4 @@
-Code,Name,Description,Knowledge,Charisma,Fitness,Energy,Stress,Money,Flavor Text
+Code,Name,Description,Intelligence,Charisma,Fitness,Energy,Stress,Money,Flavor Text
 a_homework,Do Homework,Spend time doing your homework,1,0,0,-15,0,0,�You spent your time working on your homework.� �Slowly� Diligently� You apply yourself with what knowledge you have of {major}...� �And before you know it� it's done!� (Your Intelligence has increased by 1)
 a_study,Study for exam,Spend time studying for an exam,1,0,0,-20,0,0,�You spent time studying for your exam� �You REFUSE to have your ass thoroughly clapped by your {major} exam. You�ll show the proctor you are not to be underestimated. Turn your exhaustion into motivation!� (Your Intelligence has increased by 2)
 a_workout,Have a workout,Spend time exercising ,0,0,1,-30,-15,0,"�You spent time exercising.� �A healthy body is also a healthy mind. Even in your darkest hours, your body will always be with you, so treat it with the respect it deserves.� �A little cardio here, some weight trainings there, don't forget to lift with your legs.� �...� �You feel exhausted in a good way.� (Your Fitness has increased by 1)"
