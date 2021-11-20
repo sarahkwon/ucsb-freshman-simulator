@@ -25,13 +25,13 @@ The main gameplay loop is choosing which activities to do and events to visit, c
 
 # Mechanics:
 
-Name entry: \\
+Name entry: 
 * Naming your player
 * Naming your major
 
 The name typed for your “player name” will insert for all scenarios that mention your name 
 
-The name typed for “Major” will insert for all scenarios that mention a class or subject or major. \\
+The name typed for “Major” will insert for all scenarios that mention a class or subject or major. 
 * Ex: “You are a [Biology] student. You are late to your [Biology] class. Next week is the [Biology] final.”
 
 
@@ -39,7 +39,7 @@ Activities have estimates of how much time and energy they are going to take, ho
 
 Events: Some activities will force the player into a random scenario where they must make a decision that will have an impact on their stats, time, money, status or progress certain ending flags or game overs. Increasing your stats through activities are the best way to survive these random scenario encounters so that you may have a more favorable outcome.
 
-Types of events/activities: \\
+Types of events/activities:
 * SE - scheduled events, you choose to attend
 * RE - random events that affect you
 * Activities - something that you choose to do
