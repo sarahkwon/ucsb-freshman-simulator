@@ -85,7 +85,7 @@ class Protagonist():
         self.updateCharisma(arg.charisma)
         print(
             f"""
-    {arg.name}
+    {arg.name:^4}
     Major: {self.major}
 |----RESOURCES----<>
 | Stress   | {self.stress:<3} {psign if arg.stress > 0 else nsign}{lbracket if arg.stress < 0 else nsign}{arg.stress if arg.stress != 0 else nsign:>1}{rbracket if arg.stress != 0 else nsign}
