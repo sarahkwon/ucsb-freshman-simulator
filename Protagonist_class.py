@@ -10,10 +10,10 @@ class Protagonist():
         self.intelligence = 0
         self.charisma = 5
         self.fitness = 1
-        self.xp = 1 
+        self.xp = 1
         self.stress = 0 #0 - 100%
         self.energy = 100 #0 - 100%
-        self.money = 50 
+        self.money = 500
 
 
     # update player class given a class activity
@@ -71,8 +71,12 @@ class Protagonist():
         
     def printStats(self, args):
         arg = activities[args]
-        psign = "+"
-        msign = ""
+        psign = "(+"
+        msign = "("
+        nsign = ""
+        lbracket = '('
+        rbracket = ')'
+
         self.updateStress(arg.stress)
         self.updateEnergy(arg.energy)
         self.updateMoney(arg.money)
@@ -84,14 +88,14 @@ class Protagonist():
     {self.name}
     Major: {self.major}
 |----RESOURCES----<>
-| Stress   | {self.stress:<6}    ({psign if arg.stress >= 0 else msign}{arg.stress:>1})
-| Energy   | {self.energy:<6}    ({psign if arg.energy >= 0 else msign}{arg.energy:>1})
-| Money    |${self.money:<6}    ({psign if arg.money >=0 else msign}{arg.money:>1})  
+| Stress   | {self.stress:<3} {psign if arg.stress > 0 else nsign}{lbracket if arg.stress < 0 else nsign}{arg.stress if arg.stress != 0 else nsign:>1}{rbracket if arg.stress != 0 else nsign}
+| Energy   | {self.energy:<3} {psign if arg.energy > 0 else nsign}{lbracket if arg.energy < 0 else nsign}{arg.energy if arg.energy != 0 else nsign:>1}{rbracket if arg.energy != 0 else nsign}
+| Money    |${self.money:<3} {psign if arg.money > 0 else nsign}{lbracket if arg.money < 0 else nsign}{arg.money if arg.money != 0 else nsign:>1}{rbracket if arg.money != 0 else nsign}
 |------STATS------<>
-| XP       | {self.xp:<6}    ({200:>1})
-| Intel    | {self.intelligence:<6}    ({psign if arg.intelligence >= 0 else msign}{arg.intelligence:>1})  
-| Fitness  | {self.fitness:<6}    ({psign if arg.fitness >= 0 else msign}{arg.fitness:>1})
-| Charisma | {self.charisma:<6}    ({psign if arg.charisma >= 0 else msign}{arg.charisma:>1})
+| XP       | {self.xp:<3} ({200:>1})
+| Intel    | {self.intelligence:<3} {psign if arg.intelligence > 0 else nsign}{arg.intelligence if arg.intelligence != 0 else nsign:>1}{rbracket if arg.intelligence != 0 else nsign}
+| Fitness  | {self.fitness:<3} {psign if arg.fitness > 0 else nsign}{arg.fitness if arg.fitness != 0 else nsign:>1}{rbracket if arg.fitness != 0 else nsign}
+| Charisma | {self.charisma:<3} {psign if arg.charisma > 0 else nsign}{arg.charisma if arg.charisma != 0 else nsign:>1}{rbracket if arg.charisma != 0 else nsign}
 |------------------<>
             """
         )
