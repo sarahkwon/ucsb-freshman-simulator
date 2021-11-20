@@ -1,6 +1,6 @@
 import pygame
 import pygame_gui
-from ClassActivity import *
+
 
 pygame.init()
 
