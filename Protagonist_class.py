@@ -1,6 +1,7 @@
 #protagonist.py'
 import ClassActivity as Activity
 import ClassEvent as Event
+from   ClassActivity import activities
 
 class Protagonist():
     def __init__(self, your_name, your_major):
@@ -68,22 +69,29 @@ class Protagonist():
     def updateMoney(self, amt):
         self.money += amt
         
-    def printStats(self):
+    def printStats(self, args):
+        arg = activities[args]
+        self.updateStress(arg.stress)
+        self.updateEnergy(arg.energy)
+        self.updateMoney(arg.money)
+        self.updateIntelligence(arg.intelligence)
+        self.updateFitness(arg.fitness)
+        self.updateCharisma(arg.charisma)
         print(
-            """
-    {}
-    Major: {}
+            f"""
+    {self.name}
+    Major: {self.major}
 |----RESOURCES----<>
-| Stress   | {}   
-| Energy   | {}   
-| Money    | ${}
+| Stress   | {self.stress:<6}    ({arg.stress:>1})
+| Energy   | {self.energy:<6}    ({arg.energy:>1})
+| Money    |${self.money:<6}    ({arg.money:>1})  
 |------STATS------<>
-| XP       | {} 
-| Intel    | {}   
-| Fitness  | {}   
-| Charisma | {}   
+| XP       | {self.xp:<6}    ({200:>1})
+| Intel    | {self.intelligence:<6}    ({arg.intelligence:>1})  
+| Fitness  | {self.fitness:<6}    ({arg.fitness:>1})
+| Charisma | {self.charisma:<6}    ({arg.charisma:>1})
 |------------------<>
-            """.format(self.name, self.major, self.stress, self.energy, self.money, self.xp, self.intelligence, self.fitness, self.charisma)
+            """
         )
 
 if __name__ == "__main__":

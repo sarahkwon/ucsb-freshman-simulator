@@ -39,7 +39,7 @@ def main_loop():
             pass
         else:
             print(activities[choice - 1].code)
-            ui.outcome_text(choice - 1)
+            protagonist.printStats(choice - 1)
 
 
 
