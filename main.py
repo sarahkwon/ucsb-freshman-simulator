@@ -1,5 +1,6 @@
 import Protagonist_class as prot
-import UI as ui
+from UI import ui
+from ClassActivity import *
 import ClassActivity as activity
 import ClassEvent as event
 
@@ -7,13 +8,11 @@ import ClassEvent as event
 #mainloop - time system; player choices - , protag stats and resource changes
 #exit - starts saving: record attributes of properties of all objects [save(<object.attribute>)]; break mainloop; exit application
 
-activities = []
+ui = ui()
 
 def menu():
 
     return None
-
-activities = activity.addActivities("activities.csv")
 
 #    event.addEvents()
 name = input('Please input your name: ')
@@ -33,8 +32,13 @@ def main_loop():
             activities_list.append(activities[i].name)
 
         print(activities_list)
-        activity_to_execute = ui.option_selection()
-        print(activity_to_execute)
+        choice = ui.option_selection(activities_list)
+        if choice == 0:
+            break
+        elif choice == None:
+            pass
+        else:
+            print(activities[choice - 1].code)
 
 
 
