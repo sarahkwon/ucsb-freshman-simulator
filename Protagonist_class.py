@@ -85,7 +85,6 @@ class Protagonist():
 |------------------<>
             """.format(self.name, self.major, self.stress, self.energy, self.money, self.xp, self.intelligence, self.fitness, self.charisma)
         )
-=======
 
 if __name__ == "__main__":
     test = Protagonist("John", "cs")
