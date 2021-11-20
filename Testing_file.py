@@ -4,4 +4,9 @@ import UI as ui
 import ClassActivity as activity
 import ClassEvent as event
 
-ui = ui.ui()
+activities = activity.addActivities("activities.csv")
+
+for i in activities:
+    print(i)
+
+
