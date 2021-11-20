@@ -38,7 +38,7 @@ def addActivities(fileName):
                 i += 1
         return activities
 
-activities = addActivities("Activities.csv")
+activities = addActivities("Activities.csv") #Call
 
 if __name__ == "__main__":
     a = addActivities('Activities.csv')

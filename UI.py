@@ -1,5 +1,3 @@
-from ClassActivity import activities
-
 class ui:
     
     def option_selection(self, args):
