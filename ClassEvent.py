@@ -2,17 +2,15 @@ import csv
 from ClassActivity import ClassActivity
 
 class ClassEvent(ClassActivity):
-    def __init__(self, code, name, desc, schedTime, mon, tues, wed, thurs, fri, sat, sun, timeCost, knowledge, charisma, fitness, stress, energy, money, flavorText):
-        super().__init__(code, name, desc, knowledge, charisma, fitness, stress, energy, money, flavorText)
-        self.timeCost = timeCost
-        self.schedTime = schedTime
+    def __init__(self, code, name, desc, mon, tues, wed, thurs, fri, sat, sun, knowledge, charisma, fitness, stress, money, flavorText):
+        super().__init__(code, name, desc, knowledge, charisma, fitness, stress, money, flavorText)
         self.schedDays = [mon, tues, wed, thurs, fri, sat, sun]
 
     def missedEvent(self):
         return self
 
     def __repr__(self):
-        return "Name: " + self.name + " \n" + "Description: " + self.desc + "\n" + "Scheduled Time: " + self.schedTime + "; Scheduled Day: " + "Filler text \n"  + "Time Cost: " + str(self.timeCost) + "\n" + "Knowledge: " + str(self.knowledge) + "\n" + "Charisma: "+ str(self.charisma) + "\n" + "Fitness: " + str(self.fitness) + "\n" + "Energy: " + str(self.energy) + "\n" + "Stress: " + str(self.stress) + "\n" + "Money: " + str(self.money) + "\n" + "Flavor Text: " + str(self.flavorText) + "\n\n"
+        return "Name: " + self.name + " \n" + "Description: " + self.desc + "\n" + "Scheduled Days: " + "Filler text \n" + "Knowledge: " + str(self.knowledge) + "\n" + "Charisma: "+ str(self.charisma) + "\n" + "Fitness: " + str(self.fitness) + "\n" + "Stress: " + str(self.stress) + "\n" + "Money: " + str(self.money) + "\n" + "Flavor Text: " + str(self.flavorText) + "\n\n"
 
 
 
@@ -28,19 +26,16 @@ def addEvents(fileName):
                     str(row["Code"]),
                     str(row["Name"]), 
                     str(row["Description"]), 
-                    str(row["Scheduled Time"]),
-                    str(row["Monday"]),
-                    str(row["Tuesday"]),
-                    str(row["Wednesday"]),
-                    str(row["Thursday"]),
-                    str(row["Friday"]),
-                    str(row["Saturday"]),
-                    str(row["Sunday"]),
-                    int(row["Time Cost"]), 
+                    int(row["Monday"]),
+                    int(row["Tuesday"]),
+                    int(row["Wednesday"]),
+                    int(row["Thursday"]),
+                    int(row["Friday"]),
+                    int(row["Saturday"]),
+                    int(row["Sunday"]),
                     int(row["Knowledge"]),
                     int(row["Charisma"]),
                     int(row["Fitness"]), 
-                    int(row["Energy"]),
                     int(row["Stress"]),
                     int(row["Money"]),
                     str(row["Flavor Text"]),
@@ -50,5 +45,5 @@ def addEvents(fileName):
         return events
 
 if __name__ == "__main__":
-    eventList = addEvents("testClassEvent.csv")
+    eventList = addEvents("Scheduled Events.csv")
     print(eventList)
