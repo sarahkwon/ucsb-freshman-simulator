@@ -31,7 +31,6 @@ def main_loop():
         for i in activities:
             activities_list.append(activities[i].name)
 
-        print(activities_list)
         choice = ui.option_selection(activities_list)
         if choice == 0:
             break
