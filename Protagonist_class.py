@@ -71,6 +71,8 @@ class Protagonist():
         
     def printStats(self, args):
         arg = activities[args]
+        psign = "+"
+        msign = ""
         self.updateStress(arg.stress)
         self.updateEnergy(arg.energy)
         self.updateMoney(arg.money)
@@ -82,14 +84,14 @@ class Protagonist():
     {self.name}
     Major: {self.major}
 |----RESOURCES----<>
-| Stress   | {self.stress:<6}    ({arg.stress:>1})
-| Energy   | {self.energy:<6}    ({arg.energy:>1})
-| Money    |${self.money:<6}    ({arg.money:>1})  
+| Stress   | {self.stress:<6}    ({psign if arg.stress >= 0 else msign}{arg.stress:>1})
+| Energy   | {self.energy:<6}    ({psign if arg.energy >= 0 else msign}{arg.energy:>1})
+| Money    |${self.money:<6}    ({psign if arg.money >=0 else msign}{arg.money:>1})  
 |------STATS------<>
 | XP       | {self.xp:<6}    ({200:>1})
-| Intel    | {self.intelligence:<6}    ({arg.intelligence:>1})  
-| Fitness  | {self.fitness:<6}    ({arg.fitness:>1})
-| Charisma | {self.charisma:<6}    ({arg.charisma:>1})
+| Intel    | {self.intelligence:<6}    ({psign if arg.intelligence >= 0 else msign}{arg.intelligence:>1})  
+| Fitness  | {self.fitness:<6}    ({psign if arg.fitness >= 0 else msign}{arg.fitness:>1})
+| Charisma | {self.charisma:<6}    ({psign if arg.charisma >= 0 else msign}{arg.charisma:>1})
 |------------------<>
             """
         )
