@@ -1,5 +1,6 @@
 #protagonist.py'
 import ClassActivity as Activity
+import ClassEvent as Event
 
 class Protagonist():
     def __init__(self, your_name, your_major):
@@ -15,12 +16,20 @@ class Protagonist():
 
     # update player class given a class activity
     def updateStats(self, activity):
-        self.updateKnowledge(activity.intelligence)
+        self.updateKnowledge(activity.knowledge)
         self.updateCharisma(activity.charisma)
         self.updateFitness(activity.fitness)
         self.updateEnergy(activity.energy)
         self.updateStress(activity.stress)
         self.updateMoney(activity.money)
+
+    def updateStats(self, event):
+        self.updateKnowledge(event.knowledge)
+        self.updateCharisma(event.charisma)
+        self.updateFitness(event.fitness)
+        self.updateEnergy(event.energy)
+        self.updateStress(event.stress)
+        self.updateMoney(event.money)
 
 
     # basic set functions for class    
@@ -61,6 +70,10 @@ class Protagonist():
 
 if __name__ == "__main__":
     test = Protagonist("John", "cs")
-    testActivity = Activity.ClassActivity("test_code", "test_activity", "this is a test activity", 1, 1, 1, 1, -1, -1, -1, "flavor text")
+    testActivity = Activity.ClassActivity("test_code", "test_activity", "this is a test activity", 1, 1, 1,-1, -1, -1, "flavor text")
     test.updateStats(testActivity)
     print(test.r_energy)
+
+    testEvent = Event.ClassEvent("test_event", "test event name", "this is a test event", 1, 1, 1, 1, 1, 1, 1, 4, -1, -1, -1, -1, "flavor text")
+    test.updateStats(testEvent)
+    print(test.s_Knowledge)
