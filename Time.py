@@ -2,11 +2,11 @@
 class Time(week, day, time):
     def __init__(self):
         days_of_the_week = ['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday']
-        current_day = day
-        current_week = week
-        current_time = time
+        self.current_day = day
+        self.current_week = week
+        self.current_time = time
 
-    def skip(minutes):
+    def skip(self, minutes):
         current_time += minutes
         if current_time >= 1440:
             current_day += 1
