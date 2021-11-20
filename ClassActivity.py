@@ -2,11 +2,11 @@ import csv
 
 class ClassActivity:
 
-    def __init__(self, code, name, desc, knowledge, charisma, fitness, energy, stress, money, flavorText):
+    def __init__(self, code, name, desc, intelligence, charisma, fitness, energy, stress, money, flavorText):
         self.code = code
         self.name = name
         self.desc = desc
-        self.knowledge = knowledge
+        self.intelligence = intelligence
         self.charisma = charisma
         self.fitness = fitness
         self.energy = energy
@@ -15,7 +15,7 @@ class ClassActivity:
         self.flavorText = flavorText
     
     def __repr__(self):
-        return "Name: " + self.name + ": \n" + "Description: " + self.desc +"\n" + "Knowledge: " + str(self.knowledge) + "\n" + "Charisma: "+ str(self.charisma) + "\n" + "Fitness: " + str(self.fitness) + "\n" + "Energy: " + str(self.energy) + "\nStress: " + str(self.stress) + "\n" + "Money: " + str(self.money) + "\n" +"Flavor Text: " + self.flavorText + "\n\n"
+        return "Name: " + self.name + ": \n" + "Description: " + self.desc +"\n" + "Intelligence: " + str(self.intelligence) + "\n" + "Charisma: "+ str(self.charisma) + "\n" + "Fitness: " + str(self.fitness) + "\n" + "Energy: " + str(self.energy) + "\nStress: " + str(self.stress) + "\n" + "Money: " + str(self.money) + "\n" +"Flavor Text: " + self.flavorText + "\n\n"
 
 def addActivities(fileName):
         activities = {}
@@ -29,7 +29,7 @@ def addActivities(fileName):
                     str(row["Code"]),
                     str(row["Name"]), 
                     str(row["Description"]),  
-                    int(row["Knowledge"]),
+                    int(row["Intelligence"]),
                     int(row["Charisma"]),
                     int(row["Fitness"]), 
                     int(row["Energy"]),
@@ -39,6 +39,8 @@ def addActivities(fileName):
                 )
                 i += 1
         return activities
+
+activities = addActivities("Activities.csv")
 
 if __name__ == "__main__":
     a = addActivities('Activities.csv')
