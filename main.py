@@ -33,6 +33,7 @@ def main_loop():
             events_list.append(event.events[i].name)
 
         choice = ui.option_selection(activities_list, events_list)
+        print(choice)
         
         if choice == 'z':
             break

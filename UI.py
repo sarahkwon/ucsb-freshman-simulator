@@ -1,4 +1,6 @@
 import Protagonist_class as prot
+from Activity import activities
+from ScheduledEvent import events
 import Activity as activity
 import ScheduledEvent as event
 
@@ -33,12 +35,17 @@ class ui:
                 return None
             else:
                 self.perform_choice_action(int(user_choice))
+                return activities[(int(user_choice) - 1)].code
         except:
-            if ord(user_choice) >= x:
+            if len(user_choice) > 1:
+                print("---Please enter a valid input---")
+                return None
+            elif ord(user_choice) >= x:
                 print("---Please enter a valid input---")
                 return None
             else:
                 self.perform_choice_action(user_choice)
+                return events[(ord(user_choice) - 97)].code
         
     #Performs the action user inputted
     def perform_choice_action(self, choice):
