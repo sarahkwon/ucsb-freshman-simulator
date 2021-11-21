@@ -1,0 +1,27 @@
+first_name = input("What is your first name? : ")
+last_name = input("What is your last name? : ")
+major = input()
+
+print("Your name is " + first_name +" " + last_name)
+print("You are majoring in " + major)
+
+“A young {name} e sits in their newly appointed dormitory room.”
+“It is the end of a long journey of applications, testing, moving out and heartfelt goodbyes.”
+“Using nothing but effort, tenacity, passion for {major} and a little bit of cash, you have arrived at University of Santa Barbara.”
+“Exciting and challenging times await you at college and only you have the power to control your destiny lest you leave it up to fate itself.” 
+“There are qualities of student life that cannot be put on a backburner less they consume your life.”
+“Reach for the stars, but at the same time, try to know your limits. Your actions will require energy. Think of it as the will to move or concentrate. If your energy is too low you will be unable to do activities. There are ways to recover these bars however, one of which being sleep.”
+“You should attend your classes, how else are you supposed to become an expert in {major}? Strive to build your intelligence. Neglecting your studies, lectures and exams might lead to expulsion.”
+(Pro tip: Your GOLD page says that your classes meet on Mondays, Wednesdays, and Fridays, there will also be mandatory Exams, which if you happen to fail at least 3, you will be expelled, resulting in a Game Over, talk about hardcore.) 
+“Try to make friends along the way. Let's be real, nobody is really here to study the whole time. Now is the perfect time to practice your conversation skills and build character that can strengthen your charisma. There's nothing wrong with being a loner, but it doesn't hurt to navigate around tricky social scenarios.” 
+“While you're at it, try not to neglect your physical health, specifically athletics. Might as well strengthen the mind and body. A healthy body is known to improve energy and mitigate stress.”
+“Ah yes, stress, the natural enemy of any student or growing youth in the modern era. Simply put, try keeping it as low as possible should you wish to see the light at the end of the tunnel for your first year. Stress will accumulate as you work on tasks, study, meet deadlines and sometimes, randomly for no reason at all. Sleeping is your best cure. Should your stress get too high, you will literally die.”
+“Money is what makes the world go round and it's as simple as that. No money, no life. Or rather, no money, no food, no housing. You have a limited amount of it so spend it wisely. No, you cannot live without buying food or paying rent. Failure to pay for expenses will lead to getting evicted.”
+“(Pro tip: For brevity's sake, you have already applied and got hired for a job here in Isla Vista, Good for you! It's the local 7-Eleven and you'll be making $5 an hour on Tuesdays and Thursdays)
+“Your life will be plagued with things you are forced to do such as classes, exams or working at your job. But is that not the life of an adult, being forced to do things you don’t want to do in order to literally not die. Or is that capitalism? Whatever.” 
+“But fear not, sometimes you will be given free time to do activities you do want to do. Not only can they enrich yourself as a human being but they also might help your studies and relieve your stress. It is important to have hobbies after all.” 
+“It is important to leave your room from time to time, after all, how else are you going to experience God's great gift of life and randomness on this earth. Embrace random events, as they can help or hinder you. But isn't chaos the spice of life? Enjoy your time here.” 
+“With this, you are ready to enter the tumultuous exciting world of college life. The world can be your oyster or your trap.”
+“Will you bravely face the entropy of student life and survive, or drown yourself in hubris of your own inactive defiance.”
+“Tomorrow is Monday, the first day of school.”
+“What will you do?” 
