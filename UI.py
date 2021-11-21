@@ -40,6 +40,7 @@ class ui:
             else:
                 self.perform_choice_action(user_choice)
         
+    #Performs the action user inputted
     def perform_choice_action(self, choice):
         if choice == 'z':
             return 'z'
