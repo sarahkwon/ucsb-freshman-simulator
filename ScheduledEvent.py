@@ -1,7 +1,7 @@
 import csv
-from ClassActivity import ClassActivity
+from Activity import Activity
 
-class ClassEvent(ClassActivity):
+class ScheduledEvent(Activity):
     def __init__(self, code, name, desc, mon, tues, wed, thurs, fri, sat, sun, intelligence, charisma, fitness, stress, money, flavorText):
         super().__init__(code, name, desc, intelligence, charisma, fitness, 0, stress, money, flavorText)
         self.schedDays = [mon, tues, wed, thurs, fri, sat, sun]
@@ -21,8 +21,8 @@ def addEvents(fileName):
             r = csv.DictReader(csvfile, delimiter=',', quoting=csv.QUOTE_ALL, skipinitialspace=True)
             i = 0
             for row in r:
-                # for each row in csvFile, append the class activity to the array activities
-                events[i] = ClassEvent( 
+                # for each row in csvFile, append the event to the array events
+                events[i] = ScheduledEvent( 
                     str(row["Code"]),
                     str(row["Name"]), 
                     str(row["Description"]), 
@@ -45,5 +45,5 @@ def addEvents(fileName):
         return events
 
 if __name__ == "__main__":
-    eventList = addEvents("Scheduled Events.csv")
+    eventList = addEvents("Events_Scheduled.csv")
     print(eventList)

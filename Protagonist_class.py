@@ -1,7 +1,7 @@
 #protagonist.py'
-import ClassActivity as Activity
-import ClassEvent as Event
-from   ClassActivity import activities
+import Activity as act
+from Activity import activities
+import ScheduledEvent as scheduledEvent
 import PassiveRandomEvent as PREvent
 
 class Protagonist():
@@ -91,11 +91,11 @@ class Protagonist():
 
 if __name__ == "__main__":
     test = Protagonist("John", "cs")
-    testActivity = Activity.ClassActivity("test_code", "test_activity", "this is a test activity", 1, 1, 1,-50, -1, -20, "flavor text")
+    testActivity = act.Activity("test_code", "test_activity", "this is a test activity", 1, 1, 1,-50, -1, -20, "flavor text")
     test.updateStats(testActivity)
     print(test.money)
 
-    testEvent = Event.ClassEvent("test_event", "test event name", "this is a test event", 1, 1, 1, 1, 1, 1, 1, 60, -1, -1, -1, -5, "flavor text")
+    testEvent = scheduledEvent.ScheduledEvent("test_event", "test event name", "this is a test event", 1, 1, 1, 1, 1, 1, 1, 60, -1, -1, -1, -5, "flavor text")
     test.updateStats(testEvent)
     print(test.intelligence)
 

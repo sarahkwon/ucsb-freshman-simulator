@@ -1,8 +1,8 @@
 #Testing file
 import Protagonist_class as prot
 import UI as ui
-import ClassActivity as activity
-import ClassEvent as event
+import Activity as activity
+import ScheduledEvent as event
 
 activities = activity.addActivities("activities.csv")
 name = input('Please input your name: ')

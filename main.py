@@ -1,7 +1,7 @@
 import Protagonist_class as prot
 from UI import ui
-import ClassActivity as activity
-import ClassEvent as event
+import Activity as activity
+import ScheduledEvent as event
 
 #game starts with menu - menu loop
 #mainloop - time system; player choices - , protag stats and resource changes

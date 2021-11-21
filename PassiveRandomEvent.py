@@ -1,9 +1,9 @@
 # Code,Name,Type,Intelligence,Charisma,Fitness,Energy,Stress,Money,Flavor Text
 # type is not needed because all these events will be passive... easier to make separate classes than just one big mess
 import csv
-from ClassActivity import ClassActivity
+from Activity import Activity
 
-class PassiveRandomEvent(ClassActivity):
+class PassiveRandomEvent(Activity):
 
     def __init__(self, code, name, desc, eventType, intelligence, charisma, fitness, energy, stress, money, flavorText):
         super().__init__(code, name, desc, intelligence, charisma, fitness, energy, stress, money, flavorText)
