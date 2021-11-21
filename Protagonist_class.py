@@ -2,6 +2,7 @@
 import ClassActivity as Activity
 import ClassEvent as Event
 from   ClassActivity import activities
+import PassiveRandomEvent as PREvent
 
 class Protagonist():
     def __init__(self, your_name, your_major):
@@ -16,22 +17,14 @@ class Protagonist():
         self.money = 500
 
 
-    # update player class given a class activity
+    # update player class given an activity/event/random event
     def updateStats(self, activity):
         self.updateIntelligence(activity.intelligence)
         self.updateCharisma(activity.charisma)
         self.updateFitness(activity.fitness)
+        self.updateEnergy(activity.energy)
         self.updateStress(activity.stress)
         self.updateMoney(activity.money)
-
-    def updateStats(self, event):
-        self.updateIntelligence(event.intelligence)
-        self.updateCharisma(event.charisma)
-        self.updateFitness(event.fitness)
-        self.updateEnergy(event.energy)
-        self.updateStress(event.stress)
-        self.updateMoney(event.money)
-
 
     # basic set functions for class    
     def updateIntelligence(self, amt):
@@ -102,10 +95,19 @@ class Protagonist():
 
 if __name__ == "__main__":
     test = Protagonist("John", "cs")
-    testActivity = Activity.ClassActivity("test_code", "test_activity", "this is a test activity", 1, 1, 1,-1, -1, -1, "flavor text")
+    testActivity = Activity.ClassActivity("test_code", "test_activity", "this is a test activity", 1, 1, 1,-50, -1, -20, "flavor text")
     test.updateStats(testActivity)
-    print(test.stress)
+    print(test.money)
 
-    testEvent = Event.ClassEvent("test_event", "test event name", "this is a test event", 1, 1, 1, 1, 1, 1, 1, 4, -1, -1, -1, -1, "flavor text")
+    testEvent = Event.ClassEvent("test_event", "test event name", "this is a test event", 1, 1, 1, 1, 1, 1, 1, 60, -1, -1, -1, -5, "flavor text")
     test.updateStats(testEvent)
     print(test.intelligence)
+
+    testRandomEvent = PREvent.PassiveRandomEvent("test_Randomevent", "test random event name", "this is a test random event", "Passive", 1, 2, 3, -20, 5, 6, "Flavor text")
+    test.updateStats(testRandomEvent)
+    print("Intelligence:",test.intelligence)
+    print("Charisma:",test.charisma)
+    print("Fitness:",test.fitness)
+    print("Energy:",test.energy)
+    print("Stress:", test.stress)
+    print("Money:",test.money)
