@@ -5,11 +5,12 @@ import UI as ui
 import Activity as activity
 import ScheduledEvent as event
 import PassiveRandomEvent as passiveEvent
+import ActiveRandomEvent as activeEvent
 
 activities = activity.addActivities("activities.csv")
-name = input('Please input your name: ')
-major = input('Please input your major: ')
-protagonist = prot.Protagonist(name, major)
+# name = input('Please input your name: ')
+# major = input('Please input your major: ')
+# protagonist = prot.Protagonist(name, major)
 
 # protagonist.printStats()
 
@@ -24,12 +25,16 @@ protagonist = prot.Protagonist(name, major)
 passiveEvents = passiveEvent.addRandomEvents("Events_random_passive.csv")
 passiveEvents = list(passiveEvents.items())
 
+activeEvents = activeEvent.addRandomEvents("testActiveRandomEvent.csv")
+activeEvents = list(activeEvents.items())
+
 # see whether or not an active/passive event will occur or not
 randomEventTrigger = random.choice(["active", "passive", "noRandomEvent"])
 print(randomEventTrigger)
 
 if (randomEventTrigger == "active"):
-    print("choosing a random active event")
+    chosenEvent = random.choice(activeEvents)
+    print(chosenEvent)
 elif (randomEventTrigger == "passive"):
     chosenEvent = random.choice(passiveEvents)
     print(chosenEvent)

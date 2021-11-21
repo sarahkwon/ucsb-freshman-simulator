@@ -14,7 +14,7 @@ class ActiveRandomEvent():
         self.choiceList = {} #list of choices that the player can choose from
 
     def __repr__(self):
-        return "Name: " + self.name + "\nDescription: " +  "\nflavorText: " + self.flavorText + "\n\n"
+        return "Name: " + self.name + "\nDescription: " + self.desc +  "\nflavorText: " + self.flavorText + "\n"
 
     def printChoices(self):
         for i in range(len(self.choiceList)):
@@ -68,7 +68,7 @@ def addRandomEvents(fileName):
 if __name__ == "__main__":
     randomEventList = addRandomEvents("testActiveRandomEvent.csv")
     print(randomEventList)
-    randomEventList[0].printChoices()
+    # randomEventList[0].printChoices()
 
 # instead of storing each thing individually, each active event object will have its
 # attributes but also store a list of the available options
