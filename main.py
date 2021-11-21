@@ -25,18 +25,7 @@ def main_loop():
         if u_inp == 'end':
             break
 
-        activities_list = []
-        for i in activities:
-            activities_list.append(activities[i].name)
-        events_list = []
-        for i in event.events:
-            events_list.append(event.events[i].name)
-
-        choice = ui.option_selection(activities_list, events_list)
         
-        if choice == 'z':
-            break
-
 
 
     return None
