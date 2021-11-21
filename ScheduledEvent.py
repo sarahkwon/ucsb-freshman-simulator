@@ -44,6 +44,8 @@ def addEvents(fileName):
                 i += 1
         return events
 
+events = addEvents("Events_Scheduled.csv") #So events can be accessed in other files
+
 if __name__ == "__main__":
     eventList = addEvents("Events_Scheduled.csv")
     print(eventList)
