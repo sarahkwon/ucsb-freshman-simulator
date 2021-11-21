@@ -28,6 +28,21 @@ def main_loop():
         
 
 
+        activities_list = []
+        for i in activities:
+            activities_list.append(activities[i].name)
+        events_list = []
+        for i in event.events:
+            events_list.append(event.events[i].name)
+
+        choice = ui.option_selection(activities_list, events_list)
+        print(choice)
+        
+        if choice == 'z':
+            break
+
+
+
     return None
 
 

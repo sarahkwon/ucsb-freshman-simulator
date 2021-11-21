@@ -33,6 +33,8 @@ class ui:
             if int(user_choice) > len(activity):
                 print("---Please enter a valid input---")
                 return None
+            elif int(user_choice) == 0:
+                self.perform_choice_action(int(user_choice))
             else:
                 self.perform_choice_action(int(user_choice))
                 return activities[(int(user_choice) - 1)].code
