@@ -15,9 +15,7 @@ def menu():
     return None
 
 #    event.addEvents()
-name = input('Please input your name: ')
-major = input('Please input your major: ')
-protagonist = prot.Protagonist(name, major)
+prot.name_major_input()
 
 
 def main_loop():
@@ -32,13 +30,15 @@ def main_loop():
             activities_list.append(activities[i].name)
 
         choice = ui.option_selection(activities_list)
-        if choice == 0:
+        if choice == 'e':
             break
         elif choice == None:
             pass
+        elif choice == 0:
+            prot.protagonist.printStats()
         else:
             print(activities[choice - 1].code)
-            protagonist.printStats(choice -1)
+            prot.protagonist.printStatsUpdates(choice -1)
 
 
 
