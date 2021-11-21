@@ -1,4 +1,4 @@
-from ClassActivity import activities
+from Activity import activities
 from Protagonist_class import Protagonist
 
 class ui:

@@ -1,6 +1,6 @@
 import csv
 
-class ClassActivity:
+class Activity:
 
     def __init__(self, code, name, desc, intelligence, charisma, fitness, energy, stress, money, flavorText):
         self.code = code
@@ -25,7 +25,7 @@ def addActivities(fileName):
             i = 0
             for row in r:
                 # for each row in csvFile, append the class activity to the array activities
-                activities[i] = ClassActivity( 
+                activities[i] = Activity( 
                     str(row["Code"]),
                     str(row["Name"]), 
                     str(row["Description"]),  
