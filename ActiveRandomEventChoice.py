@@ -12,6 +12,7 @@ class ActiveRandomEventChoice(Activity):
         self.charismaCheck = charismaCheck
         self.fitnessCheck = fitnessCheck
         self.energyCheck = energyCheck
+        self.stressCheck = stressCheck
         self.moneyCheck = moneyCheck
         
 
@@ -19,6 +20,3 @@ class ActiveRandomEventChoice(Activity):
         return "Name: " + self.name + "\nDescription: " + self.desc + "\nIntelligence: " + str(self.intelligence) + "\nCharisma: " + str(self.charisma) + "\nFitness: " + str(self.fitness) +  "\nEnergy: " + str(self.energy) + "\nStress: " + str(self.stress) + "\nMoney: " + str(self.money) + "\nflavorText: " + self.flavorText + "\n\n"
 
 #class end
-
-if __name__ == "__main__":
-    print("haha")
