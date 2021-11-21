@@ -25,8 +25,6 @@ def main_loop():
         u_inp = input()
         if u_inp == 'end':
             break
-
-        ui.option_selection(events[0], activities)
         
 
 
