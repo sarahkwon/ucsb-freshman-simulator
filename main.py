@@ -9,6 +9,7 @@ import ScheduledEvent as event
 
 ui = ui()
 activities = activity.addActivities("Activities.csv")
+events = event.addEvents("Events_Scheduled.csv")
 
 def menu():
 
@@ -25,6 +26,7 @@ def main_loop():
         if u_inp == 'end':
             break
 
+        ui.option_selection(events[0], activities)
         
 
 
