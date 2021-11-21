@@ -28,17 +28,14 @@ def main_loop():
         activities_list = []
         for i in activities:
             activities_list.append(activities[i].name)
+        events_list = []
+        for i in event.events:
+            events_list.append(event.events[i].name)
 
-        choice = ui.option_selection(activities_list)
-        if choice == 'e':
+        choice = ui.option_selection(activities_list, events_list)
+        
+        if choice == 'z':
             break
-        elif choice == None:
-            pass
-        elif choice == 0:
-            prot.protagonist.printStats()
-        else:
-            print(activities[choice - 1].code)
-            prot.protagonist.printStatsUpdates(choice -1)
 
 
 

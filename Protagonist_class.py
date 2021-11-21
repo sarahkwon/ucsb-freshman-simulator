@@ -62,8 +62,11 @@ class Protagonist():
     def updateMoney(self, amt):
         self.money += amt
         
-    def printStatsUpdates(self, args):
-        arg = activities[args]
+    def printStatsUpdates(self, args, choice):
+        if type(choice) == int:
+            arg = activities[args - 1]
+        else:
+            arg = scheduledEvent.events[ord(args) - 97]
         psign = "(+"
         msign = "("
         nsign = ""
@@ -86,9 +89,9 @@ class Protagonist():
 | Money    |${self.money:<3} {psign if arg.money > 0 else nsign}{lbracket if arg.money < 0 else nsign}{arg.money if arg.money != 0 else nsign:>1}{rbracket if arg.money != 0 else nsign}
 |------STATS------<>
 | XP       | {self.xp:<3} ({200:>1})
-| Intel    | {self.intelligence:<3} {psign if arg.intelligence > 0 else nsign}{arg.intelligence if arg.intelligence != 0 else nsign:>1}{rbracket if arg.intelligence != 0 else nsign}
-| Fitness  | {self.fitness:<3} {psign if arg.fitness > 0 else nsign}{arg.fitness if arg.fitness != 0 else nsign:>1}{rbracket if arg.fitness != 0 else nsign}
-| Charisma | {self.charisma:<3} {psign if arg.charisma > 0 else nsign}{arg.charisma if arg.charisma != 0 else nsign:>1}{rbracket if arg.charisma != 0 else nsign}
+| Intel    | {self.intelligence:<3} {psign if arg.intelligence > 0 else nsign}{lbracket if arg.intelligence < 0 else nsign}{arg.intelligence if arg.intelligence != 0 else nsign:>1}{rbracket if arg.intelligence != 0 else nsign}
+| Fitness  | {self.fitness:<3} {psign if arg.fitness > 0 else nsign}{lbracket if arg.fitness < 0 else nsign}{arg.fitness if arg.fitness != 0 else nsign:>1}{rbracket if arg.fitness != 0 else nsign}
+| Charisma | {self.charisma:<3} {psign if arg.charisma > 0 else nsign}{lbracket if arg.charisma < 0 else nsign}{arg.charisma if arg.charisma != 0 else nsign:>1}{rbracket if arg.charisma != 0 else nsign}
 |------------------<>
             """
         )
@@ -103,7 +106,7 @@ class Protagonist():
 | Energy   | {self.energy:<3} 
 | Money    |${self.money:<3} 
 |------STATS------<>
-| XP       | {self.xp:<3} ({200:>1})
+| XP       | {self.xp:<3} 
 | Intel    | {self.intelligence:<3} 
 | Fitness  | {self.fitness:<3} 
 | Charisma | {self.charisma:<3} 
