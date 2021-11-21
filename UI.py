@@ -1,7 +1,4 @@
 from Activity import activities
-from __main__ import *
-
-from Protagonist_class import protagonist
 
 class ui:
     
