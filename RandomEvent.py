@@ -28,17 +28,15 @@ activeEvents = activeEvent.addRandomEvents("testActiveRandomEvent.csv")
 activeEvents = list(activeEvents.items())
 
 # see whether or not an active/passive event will occur or not
-randomEventTrigger = random.choice(["active", "passive", "noRandomEvent"])
-print(randomEventTrigger)
-
-if (randomEventTrigger == "active"):
-    chosenEvent = random.choice(activeEvents)
-    print(chosenEvent)
-elif (randomEventTrigger == "passive"):
-    chosenEvent = random.choice(passiveEvents)
-    print(chosenEvent)
-else:
-    print("no random event, move on")
+def passiveEventCheck():
+    randomEventTrigger = random.choice(["passive", "noRandomEvent"])
+    
+    if (randomEventTrigger == "passive"):
+        chosenEvent = random.choice(passiveEvents)
+        return True
+    else:
+        print("no random event, move on")
+        return False
 
 
 

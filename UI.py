@@ -4,7 +4,7 @@ from ScheduledEvent import events
 import Activity as activity
 import ScheduledEvent as event
 
-class ui:
+class ui():
     
     def option_selection(self, activity, event):
         x = ord('a')
@@ -39,7 +39,7 @@ class ui:
                 self.perform_choice_action(int(user_choice))
                 return activities[(int(user_choice) - 1)].code
         except:
-            if len(user_choice) > 1:
+            if len(user_choice) > 1 or user_choice == '':
                 print("---Please enter a valid input---")
                 return None
             elif ord(user_choice) >= x:

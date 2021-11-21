@@ -1,15 +1,16 @@
 import Protagonist_class as prot
-from UI import ui
 import Activity as activity
 import ScheduledEvent as event
+from RandomEvent import *
+from UI import ui
 
 #game starts with menu - menu loop
 #mainloop - time system; player choices - , protag stats and resource changes
 #exit - starts saving: record attributes of properties of all objects [save(<object.attribute>)]; break mainloop; exit application
 
-ui = ui()
 activities = activity.addActivities("Activities.csv")
 events = event.addEvents("Events_Scheduled.csv")
+ui = ui()
 
 def menu():
 
@@ -21,12 +22,8 @@ prot.name_major_input()
 
 def main_loop():
     while True:
-        #Exiting:
-        u_inp = input()
-        if u_inp == 'end':
-            break
         
-
+        u_inp = input("Press Enter to continue.")
         #adds all the activity names to a list so it can be passed through UI    
         activities_list = []
         for i in activities:
@@ -43,13 +40,16 @@ def main_loop():
         
         #Exits the loop if user choice is "z" or "Z".
         if choice == 'z':
-            print("Goodbye")
+            print("Goodbye.")
             break
         
-        print("Press Enter to continue.")
+        
+        if passiveEventCheck() == True:
+            print("-------An Random Event has Happened-------")
+
 
 
     return None
 
-
+    
 main_loop()
