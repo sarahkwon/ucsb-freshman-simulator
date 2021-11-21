@@ -62,7 +62,7 @@ class Protagonist():
     def updateMoney(self, amt):
         self.money += amt
         
-    def printStats(self, args):
+    def printStatsUpdates(self, args):
         arg = activities[args]
         psign = "(+"
         msign = "("
@@ -92,6 +92,31 @@ class Protagonist():
 |------------------<>
             """
         )
+
+    def printStats(self):   
+        print(
+            f"""
+    Name:  {self.name:^4}
+    Major: {self.major}
+|----RESOURCES----<>
+| Stress   | {self.stress:<3} 
+| Energy   | {self.energy:<3} 
+| Money    |${self.money:<3} 
+|------STATS------<>
+| XP       | {self.xp:<3} ({200:>1})
+| Intel    | {self.intelligence:<3} 
+| Fitness  | {self.fitness:<3} 
+| Charisma | {self.charisma:<3} 
+|------------------<>
+            """
+        )
+
+protagonist = ''
+def name_major_input():
+    name = input('Please input your name: ')
+    major = input('Please input your major: ')
+    global protagonist 
+    protagonist= Protagonist(name, major)
 
 if __name__ == "__main__":
     test = Protagonist("John", "cs")
