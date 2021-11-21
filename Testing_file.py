@@ -40,10 +40,3 @@ elif (randomEventTrigger == "passive"):
     print(chosenEvent)
 else:
     print("no random event, move on")
-
-
-
-
-
-
-
